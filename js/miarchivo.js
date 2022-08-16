@@ -16,16 +16,16 @@ while (Nombre != ""){
             alert("mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero pero águila lleva acento en la a...así que...GRYFFINDOR!");
             break;
        case "hurón":
-           alert("Cuanta sinceridad "+ Nombre + "\nclaramente, HUPLEFUF!");
+           alert("Cuanta sinceridad "+ Nombre + "\nclaramente, Hufflepuff!");
            break;
        case "huron":
-            alert("Te falto el acento joven "+ Nombre + "\nigualmente, HUPLEFUF!");
+            alert("Te falto el acento joven "+ Nombre + "\nigualmente, Hufflepuff!");
             break;
       case "león":
           alert("No siempre lo obvio es tan obvio "+ Nombre + "\nSLYTHERIN!");
           break;//
       case "leon":
-          alert("es León, no leon "+ Nombre + "\n HUPLEFUF!");
+          alert("es León, no leon "+ Nombre + "\n Hufflepuff!");
           break;
       case "víbora":
           alert("Hay que ser valiente para tener un animal venenoso de mascota joven "+ NombreIngresado + "\npero hay que prestar mucha atención para escribirlo con acento, RAVENCLAW");
@@ -37,7 +37,7 @@ while (Nombre != ""){
           alert("Es un animal amistoso, ¿sabía joven "+ Nombre + "?" + "\npero también inteligente, RAVENCLAW!");
           break;
       case "delfin":
-            alert("Es un animal amistoso, y supongo que usted también joven "+ Nombre + "\nEres HUPLEFUF!");
+            alert("Es un animal amistoso, y supongo que usted también joven "+ Nombre + "\nEres Hufflepuff!");
             break;
       case "gato":
           alert("Astuto, ambicioso, independiente...una buena elección "+ Nombre + "\nSLYTHERIN!");
@@ -67,11 +67,11 @@ break;
 function bienvenida(){
   let student  = prompt("¿Estás de acuerdo con la casa asignada? Si/No");
 
-  if (student === "Si") {
+  if (student == "Si") {
       alert ("Te damos la bienvenida a Hogwarts, 10puntos para Gryffindor!");
   }
   
-  else if (student === "No"){
+  else if (student == "No"){
       alert("No siempre las cosas salen como queremos, pero el sombrero NUNCA se equivoca");
   }
   
@@ -82,16 +82,17 @@ bienvenida();
 
 //Arrays--> ingresar la casa en la que quedo seleccionado/a para conocer más sobre la misma
 
-const Gryffindor ={id:1, caract:"Valor", founder:"Godric Gryffindor", animal: "león"};
-const Slytherin ={id:2, caract:"Ambicion", founder:"Salazar Slytherinr",animal: "serpiente"};
-const Ravenclaw ={id:3, caract:"Inteligencia", founder:"Rowena Ravenclaw", animal: "águila"};
-const Hufflepuff ={id:4, caract:"Honestidad", founder:"Helga Hufflepuff", animal: "hurón"};
+const Gryffindor ={ caract:"Valor", founder:"Godric Gryffindor", animal: "leon"};
+const Slytherin ={ caract:"Ambicion", founder:"Salazar Slytherin",animal: "serpiente"};
+const Ravenclaw ={ caract:"Inteligencia", founder:"Rowena Ravenclaw", animal: "aguila"};
+const Hufflepuff ={ caract:"Honestidad", founder:"Helga Hufflepuff", animal: "huron"};
 
 class Casa{
-    constructor(caract, founder, animal){
+    constructor( caract, founder, animal, name){
         this.caract=caract.toUpperCase();
         this.founder=founder.toUpperCase();
         this.animal=animal.toUpperCase();
+        this.name=name.toUpperCase();
 
     };
 };
@@ -100,14 +101,21 @@ class Casa{
 const casasHogwarts =[];
 
 
-casasHogwarts.push (new Casa(caract, founder, animal));
 let infoCasas = prompt ("Ingresa la casa a la que perteneces para saber más sobre ella");
+
+casasHogwarts.push (new Casa("Se caracterizan por su Valor. ","su fundador es Godric Gryffindor. ", "Su animal es el leon.", "Gryffindor"));
+casasHogwarts.push (new Casa("Se caracterizan por su Ambicion. ","su fundador es Salazar Slytherin. ", "Su animal es la serpiente.", "Slytherin"));
+casasHogwarts.push (new Casa("Se caracterizan por su Inteligencia. ","su fundadora es Rowena Ravenclaw. ", "Su animal es el aguila.", "Ravenclaw"));
+casasHogwarts.push (new Casa("Se caracterizan por su Honestidad. ","su fundadora es Helga Hufflepuff. ", "Su animal es el huron.", "Hufflepuff"));
 
 
 for (const datos of casasHogwarts){
-  console.log(datos.id);
-    console.log(datos.caract);
-    console.log(datos.founder);
+    if (datos.name.toUpperCase() == infoCasas.toUpperCase()) {
+        alert(datos.caract+datos.founder+datos.animal);
+    }
+
+    
+
 }
 
 
