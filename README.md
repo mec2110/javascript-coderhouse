@@ -1,2 +1,2 @@
 # javascript-coderhouse
-Repos de los desafíos del curso de JS de Coder House
+Arrays para obtener info sobre la casa en la que quedo seleccionado
