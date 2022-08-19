@@ -116,6 +116,24 @@ for (const datos of casasHogwarts){
 
     
 
-}
+};
 
 
+//Primer entrega final--> la idea es sumar puntos a las distintas casas
+
+const copaCasas = [
+    {nombre: Gryffindor, puntos: 0},
+{ nombre: Slytherin, puntos: 0},
+{ nombre: Ravenclaw, puntos: 0},
+{ nombre:Hufflepuff, puntos: 0},
+
+]
+
+const puntos = copaCasas.map((el)=> 
+{
+    return{
+        nombre: el.nombre,
+        puntos: el.puntos + 10
+
+}})
+alert (puntos);
