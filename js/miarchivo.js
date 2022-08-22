@@ -133,7 +133,9 @@ const puntos = copaCasas.map((el)=>
 {
     return{
         nombre: el.nombre,
-        puntos: el.puntos + 10
+        puntos: el.puntos + 10,
 
-}})
+}
+console.log(el.nombre);
+})
 alert (puntos);
