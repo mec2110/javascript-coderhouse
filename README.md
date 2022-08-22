@@ -1,2 +1,3 @@
-# javascript-coderhouse
-Repos de los desafíos del curso de JS de Coder House
+Repo https://github.com/mec2110/javascript-coderhouse.git
+
+Està es la primer entrega
