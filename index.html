@@ -1,102 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--estilos-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--estilos-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
 
 
-    <title>Primer entrega</title>
+  <title>Primer entrega</title>
 </head>
+
 <body>
   <header>
     <nav>
       <!--menu ppal-->
       <div class="topnav" id="myTopnav">
         <a class="logo"><img src="img/Logo-Hogwarts.png" id="logo"> </a>
-        <a href="#lechuza">MANDANOS TU LECHUZA</a>
+
+        <a href="#casas">CASAS</a>
+
         <a href="#copas">COPAS</a>
-        <a href="#casas" >CASAS</a>
+
+        <a href="#lechuza">MANDANOS TU LECHUZA</a>
 
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
+          <i class="fa fa-bars"></i>
         </a>
-    </div>
-  
-      
-  
+      </div>
+
+
+
     </nav>
   </header>
   <section>
     <DIV>
       <img src="img/SWKYEVQYAFFERMGFAGBCTFUZAE.jpg" style="width:100%">
       <HR>
-  <h1 class="text-center">
-    ¡Te damos la bienvenida a <strong>Hogwarts</strong>!
-  </h1> 
-</DIV>
-<img src="img/monophy.gif">
-</section>
-<section>
-<h3>CASAS</h3>
-<p>Descubrí a qué casa perteneces a través de un pequeño test:</p>
-<input>Ingresa tu nombre</input>
-<hr>
-<br>
-<h3>HISTORIA</h3>
-<h2>¿Querés saber más sobre tu casa?</h2>
-<p>Ingresá acá la casa en la que fuiste seleccionado:
-</p>
-<hr>
-<br>
-<h3>COPA DE LAS CASAS</h3>
-<h2>Conocé los resultador parciales de la copa anual de las casas!</h2>
-<p>Quién ganará? Será Gryffindor?
-</p>
-</section>
+      <div class="text-center" id="bienvenida">
 
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <p id="contacto" class="titulo-footer"><strong>Mandá tu lechuza acá!</strong></p>
-
-        <p><i class="fa fa-envelope" style="font: size 24px;color:rgb(255, 255, 255)"></i>
-          <a href="mailto:mecdesign.dg@gmail.com">Envianos un mail</a></p>
-        <p><i class="fa fa-map-marker" style="font: size 24px;color:rgb(255, 255, 255)"></i> Hogwarts -  Escuela de magia y hechicerìa</p>
       </div>
-      <br />
-      <div class="col-sm-4">
-        <p class="titulo-footer"><strong>Suscribite al quisquilloso!</strong></p>
-        <input> ingresa tu mail</input>
+    </DIV>
+    <img src="img/monophy.gif">
+  </section>
+  <section>
+    <h3>CASAS</h3>
+    <p>Descubrí a qué casa perteneces a través de un pequeño test:</p>
+    <div id="seleccion">
+      <div>
+        <input></input>
       </div>
-      <br />
-      
+    </div>
+    <hr>
+    <br>
+    <h3>HISTORIA</h3>
+    <h2>¿Querés saber más sobre tu casa?</h2>
+    <p>Ingresá acá la casa en la que fuiste seleccionado:
+    </p>
+    <div id="contenedor">
 
     </div>
-    <div class="by">
-      Diseñado y programado por María Eugenia Couto
-    </div>
-  </div>
-</footer>
+    <hr>
+    <br>
+    <h3>COPA DE LAS CASAS</h3>
+    <h2>Conocé los resultador parciales de la copa anual de las casas!</h2>
+    <p>Quién ganará? Será Gryffindor?
+    </p>
+  </section>
 
-<!--script-->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <p id="contacto" class="titulo-footer"><strong>Mandá tu lechuza acá!</strong></p>
+
+          <p><i class="fa fa-envelope" style="font: size 24px;color:rgb(255, 255, 255)"></i>
+            <a href="mailto:mecdesign.dg@gmail.com">Envianos un mail</a>
+          </p>
+          <p><i class="fa fa-map-marker" style="font: size 24px;color:rgb(255, 255, 255)"></i> Hogwarts - Escuela de
+            magia y hechicerìa</p>
+        </div>
+        <br />
+        <div class="col-sm-4">
+          <p class="titulo-footer"><strong>Suscribite al quisquilloso!</strong></p>
+          <input> ingresa tu mail</input>
+        </div>
+        <br />
+
+
+      </div>
+      <div class="by">
+        Diseñado y programado por María Eugenia Couto
+      </div>
+    </div>
+  </footer>
+
+  <!--script-->
   <script src="js/miarchivo.js"></script>
   <!--js nav-->
   <script>
     function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
     }
-</script>
+  </script>
 </body>
+
 </html>

@@ -1,68 +1,69 @@
 
 //Simulador para saber de que casa de hogwarts sos*
 
-let Nombre = prompt ("Soy el sombrero seleccionador, decime tu nombre...");
 
+let Nombre = prompt ("Soy el sombrero seleccionador, decime tu nombre...");
+while (Nombre === "") {
+alert ("Por favor, ingresa tu nombre o te envío a Azkaban!");
+Nombre = prompt ("Soy el sombrero seleccionador, decime tu nombre...");
+}
 
 let casa= prompt("Qué casa prefieres?");
+while(casa === "") {
+    alert ("si no ingresas una casa, podés volver a la tuya...");
+    casa= prompt("Qué casa prefieres?");
+  }
 
-while (Nombre != ""){
-  let animal = prompt ("Ahora, cuentame si tuvieras qué elegir una mascota, preferís aguila, hurón, león, víbora, delfín, gato, perro o loro?");
-  switch (animal) {
-      case "águila":
-           alert("mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero sólo un Slytherin creería qué es más inteligente que yo por elegir lo obvio así qué...SLYTHERIN!");
-           break;
-           case "aguila":
-            alert("mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero pero águila lleva acento en la a...así que...GRYFFINDOR!");
-            break;
-       case "hurón":
-           alert("Cuanta sinceridad "+ Nombre + "\nclaramente, Hufflepuff!");
-           break;
-       case "huron":
-            alert("Te falto el acento joven "+ Nombre + "\nigualmente, Hufflepuff!");
-            break;
-      case "león":
-          alert("No siempre lo obvio es tan obvio "+ Nombre + "\nSLYTHERIN!");
-          break;//
-      case "leon":
-          alert("es León, no leon "+ Nombre + "\n Hufflepuff!");
-          break;
-      case "víbora":
-          alert("Hay que ser valiente para tener un animal venenoso de mascota joven "+ NombreIngresado + "\npero hay que prestar mucha atención para escribirlo con acento, RAVENCLAW");
-          break;
-      case "vibora":
-            alert("Se requiere valor para tener una víbora de mascota, pero brutalidad para olvidarse un acento, "+ Nombre + "\neres...SLYTHERIN!");
-            break;
-      case "delfín":
-          alert("Es un animal amistoso, ¿sabía joven "+ Nombre + "?" + "\npero también inteligente, RAVENCLAW!");
-          break;
-      case "delfin":
-            alert("Es un animal amistoso, y supongo que usted también joven "+ Nombre + "\nEres Hufflepuff!");
-            break;
-      case "gato":
-          alert("Astuto, ambicioso, independiente...una buena elección "+ Nombre + "\nSLYTHERIN!");
+  let animal= "";
+while ( animal == ""){
+    animal = prompt ("Ahora, cuentame si tuvieras qué elegir una mascota, preferís aguila, hurón, león, víbora, delfín, gato, perro o loro?");
+    switch (animal) {
+        case "águila":
+             alert("mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero sólo un Slytherin creería qué es más inteligente que yo por elegir lo obvio así qué...SLYTHERIN!");
+             break;
+             case "aguila":
+              alert("mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero pero águila lleva acento en la a...así que...GRYFFINDOR!");
               break;
-      case "perro":
-          alert("Leal, muy leal...espero que usted también lo sea joven "+ Nombre + "\ny valiente! GRYFFINDOR!");
-          break;
-      case "loro":
-          alert("Charlatán, lunatico y aventurero...podrías ser de cualquier casa "+ Nombre + " pero serás de " + casa);
-          break;
-      default:
-        alert("Esa no es una de las opciones dadas " + Nombre + "\nEres re Slytherin!");
-      
-  } 
-  if (Nombre === "") {
-    alert ("Por favor, ingresa tu nombre o te envío a Azkaban!");
-}
-if (casa === "") {
-  alert ("si no ingresas una casa, podés volver a la tuya...");
-}
+         case "hurón":
+             alert("Cuanta sinceridad "+ Nombre + "\nclaramente, Hufflepuff!");
+             break;
+         case "huron":
+              alert("Te falto el acento joven "+ Nombre + "\nigualmente, Hufflepuff!");
+              break;
+        case "león":
+            alert("No siempre lo obvio es tan obvio "+ Nombre + "\nSLYTHERIN!");
+            break;//
+        case "leon":
+            alert("es León, no leon "+ Nombre + "\n Hufflepuff!");
+            break;
+        case "víbora":
+            alert("Hay que ser valiente para tener un animal venenoso de mascota joven "+ NombreIngresado + "\npero hay que prestar mucha atención para escribirlo con acento, RAVENCLAW");
+            break;
+        case "vibora":
+              alert("Se requiere valor para tener una víbora de mascota, pero brutalidad para olvidarse un acento, "+ Nombre + "\neres...SLYTHERIN!");
+              break;
+        case "delfín":
+            alert("Es un animal amistoso, ¿sabía joven "+ Nombre + "?" + "\npero también inteligente, RAVENCLAW!");
+            break;
+        case "delfin":
+              alert("Es un animal amistoso, y supongo que usted también joven "+ Nombre + "\nEres Hufflepuff!");
+              break;
+        case "gato":
+            alert("Astuto, ambicioso, independiente...una buena elección "+ Nombre + "\nSLYTHERIN!");
+                break;
+        case "perro":
+            alert("Leal, muy leal...espero que usted también lo sea joven "+ Nombre + "\ny valiente! GRYFFINDOR!");
+            break;
+        case "loro":
+            alert("Charlatán, lunatico y aventurero...podrías ser de cualquier casa "+ Nombre + " pero serás de " + casa);
+            break;
+        default:
+          alert("Esa no es una de las opciones dadas " + Nombre + "\nEres re Slytherin!");
+        
+    } 
+    
 
-else {
-break;
-}
-}
+  }
 
 function bienvenida(){
   let student  = prompt("¿Estás de acuerdo con la casa asignada? Si/No");
@@ -111,7 +112,8 @@ casasHogwarts.push (new Casa("Se caracterizan por su Honestidad. ","su fundadora
 
 for (const datos of casasHogwarts){
     if (datos.name.toUpperCase() == infoCasas.toUpperCase()) {
-        alert(datos.caract+datos.founder+datos.animal);
+        let contenedor = document.getElementById("contenedor");
+        contenedor.innerHTML = datos.caract+datos.founder+datos.animal;
     }
 
     
@@ -130,12 +132,20 @@ const copaCasas = [
 ]
 
 const puntos = copaCasas.map((el)=> 
-{
+{console.log(el.nombre);
     return{
         nombre: el.nombre,
         puntos: el.puntos + 10,
-
+        
 }
-console.log(el.nombre);
+
 })
-alert (puntos);
+alert (puntos[0].nombre);
+
+// Dom
+
+let welcome = document.getElementById ("bienvenida")
+welcome.innerHTML = "<h1>¡Te damos la bienvenida a Hogwarts!</h1>";
+
+let Nombres = document.getElementById ("seleccion")
+Nombres.innerHTML = "Soy el sombrero seleccionador, decime tu nombre...";
