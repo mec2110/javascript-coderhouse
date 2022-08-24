@@ -1,8 +1,14 @@
+// Dom
+
+
+
+let Nombres = document.getElementById ("seleccion")
+Nombres.innerHTML = "Soy el sombrero seleccionador, decime tu nombre...";
 
 //Simulador para saber de que casa de hogwarts sos*
 
-
-let Nombre = prompt ("Soy el sombrero seleccionador, decime tu nombre...");
+function tucasadeHogwarts(){
+let Nombre = prompt ("✨Soy un sombrero desmemoriado, recordame tu nombre...✨");
 while (Nombre === "") {
 alert ("Por favor, ingresa tu nombre o te envío a Azkaban!");
 Nombre = prompt ("Soy el sombrero seleccionador, decime tu nombre...");
@@ -64,6 +70,13 @@ while ( animal == ""){
     
 
   }
+  
+let welcome = document.getElementById ("bienvenida")
+welcome.innerHTML = "¡Te damos la bienvenida a Hogwarts "+ Nombre+"!";
+} 
+
+tucasadeHogwarts(); 
+
 
 function bienvenida(){
   let student  = prompt("¿Estás de acuerdo con la casa asignada? Si/No");
@@ -88,26 +101,25 @@ const Slytherin ={ caract:"Ambicion", founder:"Salazar Slytherin",animal: "serpi
 const Ravenclaw ={ caract:"Inteligencia", founder:"Rowena Ravenclaw", animal: "aguila"};
 const Hufflepuff ={ caract:"Honestidad", founder:"Helga Hufflepuff", animal: "huron"};
 
-class Casa{
-    constructor( caract, founder, animal, name){
-        this.caract=caract.toUpperCase();
-        this.founder=founder.toUpperCase();
-        this.animal=animal.toUpperCase();
-        this.name=name.toUpperCase();
+// class Casa{
+//     constructor( caract, founder, animal, name){
+//         this.caract=caract.toUpperCase();
+//         this.founder=founder.toUpperCase();
+//         this.animal=animal.toUpperCase();
+//         this.name=name.toUpperCase();
 
-    };
-};
+//     };
+// };
 
 //const casasHogwarts =[Gryffindor,Slytherin,Ravenclaw ,Hufflepuff ];
+function infoMiCasa(){
 const casasHogwarts =[];
-
-
 let infoCasas = prompt ("Ingresa la casa a la que perteneces para saber más sobre ella");
 
-casasHogwarts.push (new Casa("Se caracterizan por su Valor. ","su fundador es Godric Gryffindor. ", "Su animal es el leon.", "Gryffindor"));
-casasHogwarts.push (new Casa("Se caracterizan por su Ambicion. ","su fundador es Salazar Slytherin. ", "Su animal es la serpiente.", "Slytherin"));
-casasHogwarts.push (new Casa("Se caracterizan por su Inteligencia. ","su fundadora es Rowena Ravenclaw. ", "Su animal es el aguila.", "Ravenclaw"));
-casasHogwarts.push (new Casa("Se caracterizan por su Honestidad. ","su fundadora es Helga Hufflepuff. ", "Su animal es el huron.", "Hufflepuff"));
+casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Valor. Como se mencionó previamente, su fundador es Godric Gryffindor. El animal que los representa es el león.", "Gryffindor"));
+casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Ambicion. Como se mencionó previamente, su fundador es Salazar Slytherin. El animal que los representa es la serpiente.", "Slytherin"));
+casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Inteligencia. Como se mencionó previamente, su fundadora es Rowena Ravenclaw. El animal que los representa es el aguila.", "Ravenclaw"));
+casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Honestidad. Como se mencionó previamente, su fundadora es Helga Hufflepuff. El animal que los representa es el huron.", "Hufflepuff"));
 
 
 for (const datos of casasHogwarts){
@@ -119,7 +131,8 @@ for (const datos of casasHogwarts){
     
 
 };
-
+}
+infoMiCasa();
 
 //Primer entrega final--> la idea es sumar puntos a las distintas casas
 
@@ -142,10 +155,3 @@ const puntos = copaCasas.map((el)=>
 })
 alert (puntos[0].nombre);
 
-// Dom
-
-let welcome = document.getElementById ("bienvenida")
-welcome.innerHTML = "<h1>¡Te damos la bienvenida a Hogwarts!</h1>";
-
-let Nombres = document.getElementById ("seleccion")
-Nombres.innerHTML = "Soy el sombrero seleccionador, decime tu nombre...";

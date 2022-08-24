@@ -10,9 +10,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <link rel="preconnect" href="..\fuente\WizardWorldSimplified-Kxr7.ttf">
 
-
-  <title>Primer entrega</title>
+  <!--font awesome 5-->
+  <script src="https://kit.fontawesome.com/cb49666651.js" crossorigin="anonymous"></script>
+  <!--titulo-->
+  <title>Desafio 9</title>
 </head>
 
 <body>
@@ -22,11 +25,17 @@
       <div class="topnav" id="myTopnav">
         <a class="logo"><img src="img/Logo-Hogwarts.png" id="logo"> </a>
 
-        <a href="#casas">CASAS</a>
+        <a href="#casas"><i class="fa-solid fa-wand-sparkles" style="font-size:20px;color:#ffffff;"></i> CASAS DE
+          HOGWARTS</a>
 
-        <a href="#copas">COPAS</a>
+        <a href="#copas"><i class="fa-solid fa-trophy" style="font-size:20px;color:#ffffff;"></i> COPA DE LAS CASAS</a>
 
-        <a href="#lechuza">MANDANOS TU LECHUZA</a>
+        <a href="#lechuza"><i class="fa-brands fa-earlybirds" style="font-size:20px;color:#ffffff;"></i> MANDANOS TU
+          LECHUZA</a>
+
+        <a style="text-align:right;" href="#lechuza"><i class="fa-solid fa-hat-witch"
+            style="font-size:20px;color:#ffffff;"></i> Login</a>
+
 
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
@@ -40,63 +49,137 @@
   <section>
     <DIV>
       <img src="img/SWKYEVQYAFFERMGFAGBCTFUZAE.jpg" style="width:100%">
-      <HR>
-      <div class="text-center" id="bienvenida">
+      <div class="text-center h1" id="bienvenida">
 
       </div>
     </DIV>
     <img src="img/monophy.gif">
   </section>
-  <section id="casas">
+  <section id="casas" class="container">
     <h3>CASAS</h3>
-    <p>Descubrí a qué casa perteneces a través de un pequeño test:</p>
-    <div id="seleccion">
-    </div>
-      <div>
-        <input></input>
-      </div>
-      <div id="casa">
 
+    <div>
+      <p>
+        <i>«Las cuatro casas se llaman Gryffindor, Hufflepuff, Ravenclaw y Slytherin. Cada casa tiene su propia noble
+          historia y cada una ha producido notables brujas y magos. Mientras estéis en Hogwarts, vuestros triunfos
+          conseguirán que las casas ganen puntos, mientras que cualquier infracción de las reglas hará que los pierdan.
+          Al
+          finalizar el año, la casa que obtenga más puntos será premiada con la copa de la casa, un gran honor. Espero
+          que
+          todos vosotros seréis un orgullo para la casa que os toque.»</i>
+        </br>—Minerva McGonagall a los estudiantes de primer año en 1991, poco antes de la ceremonia de selección.
+      </p>
+      <p>
+        El Colegio Hogwarts de Magia y Hechicería utiliza el sistema de Casas. Los estudiantes de Hogwarts son asignados
+        a
+        una de estas cuatro Casas: Gryffindor, Slytherin, Ravenclaw y Huplefuf. La asignación a dichas casas
+        corre a cargo del Sombrero Seleccionador.
+      </p>
+    </div>
+  </br></br>
+    <div>
+      <p><i class="fa-solid fa-hat-wizard" style="font-size:20px;color:#250606 ;"></i> Descubrí a qué casa perteneces a
+        través de un pequeño test:</p>
+      <div id="seleccion">
       </div>
-    
+    </br></br>
+      <div>
+        Ingresá tu nombre <input></input>
+
+        <button class="btn" onclick="tucasadeHogwarts()">Enviar</button>
+      </div>
+    </div>
+    <div id="casa">
+
+    </div>
+
     <hr>
     <br>
     <h3>HISTORIA</h3>
     <h2>¿Querés saber más sobre tu casa?</h2>
-    <p>Ingresá acá la casa en la que fuiste seleccionado:
-    </p>
-    <p>
-      <input> </input>
-    </p>
+    <div>
+      <p>Las casas de Hogwarts son: <strong>Gryffindor</strong>, fundada por Godric Gryffindor;
+        <strong>Hufflepuff</strong>, fundada por Helga Hufflepuff;
+        <strong>Ravenclaw</strong>, fundada por Rowena Ravenclaw y <strong>Slytherin</strong>, fundada por Salazar
+        Slytherin.
+      </p>
+      <p>Ingresá acá la casa en la que fuiste seleccionado para conocer más sobre ella:
+      </p>
+    </div>
+    <div>
+      <p>
+        <input> </input>
+
+        <button class="btn" onclick="infoMiCasa()">Enviar</button>
+      </p>
+    </div>
     <div id="contenedor">
 
     </div>
     <hr>
     <br>
-    </section>
-    <section id="copas">
-    <h3>COPA DE LAS CASAS</h3>
-    <h2>Conocé los resultador parciales de la copa anual de las casas!</h2>
-    <p>Quién ganará? Será Gryffindor?
-    </p>
+  </section>
+  <section id="copas">
+    <div class="container">
+      <div class="text-center">
+        <h3>COPA DE LAS CASAS</h3>
+        </br>
+        <h6>Conocé los resultados parciales de la copa anual de las casas!</h6>
+        </br>
+        <p>Quién ganará? </p>
+        <p>Serán los valerosos Gryffindor o el ambisioso Slytherin? los inteligentes de Ravenclaw? o nos sorprenderá
+          Huplefuf?
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 column-pts gry">
+          Puntos Gryffindor
+          </br>
+          <img src="img/relojg.png">
+          </br>
+          <counter></counter>
+        </div>
+        <div class="col-sm-3 column-pts sly">
+          Puntos Slytherin
+          </br>
+          <img src="img/relojs.png">
+        </div>
+        <div class="col-sm-3 column-pts rav">
+          Puntos Ravenclaw
+          </br>
+          <img src="img/relojr.png">
+        </div>
+        <div class="col-sm-3 column-pts hup">
+          Puntos Huplefuf
+          </br>
+          <img src="img/reloja.png">
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <p id="lechuza" class="titulo-footer"><strong>Mandá tu lechuza acá!</strong></p>
+        <div class="col-sm-6">
+          <p id="lechuza" class="titulo-footer"><strong><i class="fa-brands fa-earlybirds"
+                style="font-size:20px;color:#ffffff;"></i> Mandá tu lechuza acá!</strong></p>
 
-          <p><i class="fa fa-envelope" style="font: size 24px;color:rgb(255, 255, 255)"></i>
+          <p><i class="fa fa-envelope"></i>
             <a href="mailto:mecdesign.dg@gmail.com">Envianos un mail</a>
           </p>
-          <p><i class="fa fa-map-marker" style="font: size 24px;color:rgb(255, 255, 255)"></i> Hogwarts - Escuela de
+          <p><i class="fa fa-map-marker"></i> Hogwarts - Escuela de
             magia y hechicería</p>
         </div>
         <br />
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <p class="titulo-footer"><strong>Suscribite al quisquilloso!</strong></p>
-          <input> ingresa tu mail</input>
+          <form action="/action_page.php">
+            <label for="email">Ingresa tu mail:</label>
+            <input type="email" id="email" name="email">
+            <input class="btn" type="submit">
+          </form>
         </div>
         <br />
 
