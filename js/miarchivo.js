@@ -36,7 +36,7 @@ while(casa === "") {
 
   let animal= "";
 while ( animal == ""){
-    animal = message ("Ahora, cuentame si tuvieras qué elegir una mascota, preferís aguila, hurón, león, víbora, delfín, gato, perro o loro?");
+    animal = prompt ("Ahora, cuentame si tuvieras qué elegir una mascota, preferís aguila, hurón, león, víbora, delfín, gato, perro o loro?");
     switch (animal) {
         case "águila":
              alert("mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero sólo un Slytherin creería qué es más inteligente que yo por elegir lo obvio así qué...SLYTHERIN!");
@@ -89,7 +89,7 @@ let welcome = document.getElementById ("bienvenida")
 welcome.innerHTML = "¡Te damos la bienvenida a Hogwarts "+ Nombre+"!";
 } 
 
-tucasadeHogwarts(); 
+//tucasadeHogwarts(); 
 
 
 
@@ -100,34 +100,32 @@ tucasadeHogwarts();
 
 //const casasHogwarts =[Gryffindor,Slytherin,Ravenclaw ,Hufflepuff ];
 function infoMiCasa(){
-    const Gryffindor ={ caract:"Valor", founder:"Godric Gryffindor", animal: "leon"};
-const Slytherin ={ caract:"Ambicion", founder:"Salazar Slytherin",animal: "serpiente"};
-const Ravenclaw ={ caract:"Inteligencia", founder:"Rowena Ravenclaw", animal: "aguila"};
-const Hufflepuff ={ caract:"Honestidad", founder:"Helga Hufflepuff", animal: "huron"};
+    const Gryffindor ={ caract:"Los magos y hechiceras de está casa se caracterizan por su Valor. Como se mencionó previamente, su fundador es Godric Gryffindor. El animal que los representa es el león." };
+const Slytherin ={ caract:"Los magos y hechiceras de está casa se caracterizan por su Ambición. Como se mencionó previamente, su fundador es Salazar Slytherin. El animal que los representa es la serpiente."};
+const Ravenclaw ={ caract:"Los magos y hechiceras de está casa se caracterizan por su Inteligencia. Como se mencionó previamente, su fundadora es Rowena Ravenclaw. El animal que los representa es el aguila."};
+const Hufflepuff ={ caract:"Los magos y hechiceras de está casa se caracterizan por su Honestidad. Como se mencionó previamente, su fundadora es Helga Hufflepuff. El animal que los representa es el huron."};
 
 class Casa{
-constructor( caract, founder, animal, name){
-this.caract=caract.toUpperCase();
-this.founder=founder.toUpperCase();
-this.animal=animal.toUpperCase();
-this.name=name.toUpperCase();
+constructor( caract, name){
+this.caract=caract;
+this.name=name;
 
  };
  };
- 
+
 const casasHogwarts =[];
 let infoCasas = document.getElementById("inputInfo").value;
 
 casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Valor. Como se mencionó previamente, su fundador es Godric Gryffindor. El animal que los representa es el león.", "Gryffindor", "gryffindor"));
 casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Ambicion. Como se mencionó previamente, su fundador es Salazar Slytherin. El animal que los representa es la serpiente.", "Slytherin", "slytherin"));
-casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Inteligencia. Como se mencionó previamente, su fundadora es Rowena Ravenclaw. El animal que los representa es el aguila.", "Ravenclaw", "slytherin"));
-casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Honestidad. Como se mencionó previamente, su fundadora es Helga Hufflepuff. El animal que los representa es el huron.", "Hufflepuff", "hufflepuff","huplefuf"));
+casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Inteligencia. Como se mencionó previamente, su fundadora es Rowena Ravenclaw. El animal que los representa es el aguila.", "Ravenclaw", "ravenclaw"));
+casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Honestidad. Como se mencionó previamente, su fundadora es Helga Hufflepuff. El animal que los representa es el huron.", "Hufflepuff", "hufflepuff"));
 
 
 for (const datos of casasHogwarts){
     if (datos.name.toUpperCase() == infoCasas.toUpperCase()) {
         let contenedor = document.getElementById("contenedor");
-        contenedor.innerHTML = datos.caract+datos.founder+datos.animal;
+        contenedor.innerHTML = datos.caract;
     }
 
     
