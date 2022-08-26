@@ -1,18 +1,32 @@
 // Dom
-
+function bienvenida(){
+    let student  = prompt("¿Te consideras una persona mágica? Si/No");
+  
+    if (student == "Si") {
+        alert ("✨Te damos la bienvenida a Hogwarts, 10puntos para Gryffindor!✨");
+    }
+    
+    else if (student == "No"){
+        alert("Todos tenemos magia, descubrilá acá!");
+    }
+    
+  } 
+  
+  bienvenida(); 
+  
 
 
 let Nombres = document.getElementById ("seleccion")
-Nombres.innerHTML = "Soy el sombrero seleccionador, decime tu nombre...";
+Nombres.innerHTML = "✨Soy el sombrero seleccionador, decime tu nombre...✨";
 
 //Simulador para saber de que casa de hogwarts sos*
 
 function tucasadeHogwarts(){
-let Nombre = prompt ("✨Soy un sombrero desmemoriado, recordame tu nombre...✨");
-while (Nombre === "") {
-alert ("Por favor, ingresa tu nombre o te envío a Azkaban!");
-Nombre = prompt ("Soy el sombrero seleccionador, decime tu nombre...");
-}
+let Nombre = document.getElementById ("inputNombre").value;
+// while (Nombre === "") {
+// alert ("Por favor, ingresa tu nombre o te envío a Azkaban!");
+// Nombre = document.getElementById ("inputNombre").value;
+// }
 
 let casa= prompt("Qué casa prefieres?");
 while(casa === "") {
@@ -22,7 +36,7 @@ while(casa === "") {
 
   let animal= "";
 while ( animal == ""){
-    animal = prompt ("Ahora, cuentame si tuvieras qué elegir una mascota, preferís aguila, hurón, león, víbora, delfín, gato, perro o loro?");
+    animal = message ("Ahora, cuentame si tuvieras qué elegir una mascota, preferís aguila, hurón, león, víbora, delfín, gato, perro o loro?");
     switch (animal) {
         case "águila":
              alert("mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero sólo un Slytherin creería qué es más inteligente que yo por elegir lo obvio así qué...SLYTHERIN!");
@@ -78,48 +92,36 @@ welcome.innerHTML = "¡Te damos la bienvenida a Hogwarts "+ Nombre+"!";
 tucasadeHogwarts(); 
 
 
-function bienvenida(){
-  let student  = prompt("¿Estás de acuerdo con la casa asignada? Si/No");
-
-  if (student == "Si") {
-      alert ("Te damos la bienvenida a Hogwarts, 10puntos para Gryffindor!");
-  }
-  
-  else if (student == "No"){
-      alert("No siempre las cosas salen como queremos, pero el sombrero NUNCA se equivoca");
-  }
-  
-} 
-
-bienvenida(); 
 
 
 //Arrays--> ingresar la casa en la que quedo seleccionado/a para conocer más sobre la misma
 
-const Gryffindor ={ caract:"Valor", founder:"Godric Gryffindor", animal: "leon"};
+
+
+//const casasHogwarts =[Gryffindor,Slytherin,Ravenclaw ,Hufflepuff ];
+function infoMiCasa(){
+    const Gryffindor ={ caract:"Valor", founder:"Godric Gryffindor", animal: "leon"};
 const Slytherin ={ caract:"Ambicion", founder:"Salazar Slytherin",animal: "serpiente"};
 const Ravenclaw ={ caract:"Inteligencia", founder:"Rowena Ravenclaw", animal: "aguila"};
 const Hufflepuff ={ caract:"Honestidad", founder:"Helga Hufflepuff", animal: "huron"};
 
-// class Casa{
-//     constructor( caract, founder, animal, name){
-//         this.caract=caract.toUpperCase();
-//         this.founder=founder.toUpperCase();
-//         this.animal=animal.toUpperCase();
-//         this.name=name.toUpperCase();
+class Casa{
+constructor( caract, founder, animal, name){
+this.caract=caract.toUpperCase();
+this.founder=founder.toUpperCase();
+this.animal=animal.toUpperCase();
+this.name=name.toUpperCase();
 
-//     };
-// };
-
-//const casasHogwarts =[Gryffindor,Slytherin,Ravenclaw ,Hufflepuff ];
-function infoMiCasa(){
+ };
+ };
+ 
 const casasHogwarts =[];
-let infoCasas = prompt ("Ingresa la casa a la que perteneces para saber más sobre ella");
+let infoCasas = document.getElementById("inputInfo").value;
 
-casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Valor. Como se mencionó previamente, su fundador es Godric Gryffindor. El animal que los representa es el león.", "Gryffindor"));
-casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Ambicion. Como se mencionó previamente, su fundador es Salazar Slytherin. El animal que los representa es la serpiente.", "Slytherin"));
-casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Inteligencia. Como se mencionó previamente, su fundadora es Rowena Ravenclaw. El animal que los representa es el aguila.", "Ravenclaw"));
-casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Honestidad. Como se mencionó previamente, su fundadora es Helga Hufflepuff. El animal que los representa es el huron.", "Hufflepuff"));
+casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Valor. Como se mencionó previamente, su fundador es Godric Gryffindor. El animal que los representa es el león.", "Gryffindor", "gryffindor"));
+casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Ambicion. Como se mencionó previamente, su fundador es Salazar Slytherin. El animal que los representa es la serpiente.", "Slytherin", "slytherin"));
+casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Inteligencia. Como se mencionó previamente, su fundadora es Rowena Ravenclaw. El animal que los representa es el aguila.", "Ravenclaw", "slytherin"));
+casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Honestidad. Como se mencionó previamente, su fundadora es Helga Hufflepuff. El animal que los representa es el huron.", "Hufflepuff", "hufflepuff","huplefuf"));
 
 
 for (const datos of casasHogwarts){
@@ -136,22 +138,22 @@ infoMiCasa();
 
 //Primer entrega final--> la idea es sumar puntos a las distintas casas
 
-const copaCasas = [
-    {nombre: Gryffindor, puntos: 0},
-{ nombre: Slytherin, puntos: 0},
-{ nombre: Ravenclaw, puntos: 0},
-{ nombre:Hufflepuff, puntos: 0},
+// const copaCasas = [
+//     {nombre: Gryffindor, puntos: 0},
+// { nombre: Slytherin, puntos: 0},
+// { nombre: Ravenclaw, puntos: 0},
+// { nombre:Hufflepuff, puntos: 0},
 
-]
+// ]
 
-const puntos = copaCasas.map((el)=> 
-{console.log(el.nombre);
-    return{
-        nombre: el.nombre,
-        puntos: el.puntos + 10,
+// const puntos = copaCasas.map((el)=> 
+// {console.log(el.nombre);
+//     return{
+//         nombre: el.nombre,
+//         puntos: el.puntos + 10,
         
-}
+// }
 
-})
-alert (puntos[0].nombre);
+// })
+// alert (puntos[0].nombre);
 
