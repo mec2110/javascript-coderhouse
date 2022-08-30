@@ -91,7 +91,7 @@ welcome.innerHTML = "¡Te damos la bienvenida a Hogwarts "+ Nombre+"!";
 
 //tucasadeHogwarts(); 
 
-
+git
 
 
 //Arrays--> ingresar la casa en la que quedo seleccionado/a para conocer más sobre la misma
@@ -133,6 +133,16 @@ for (const datos of casasHogwarts){
 };
 }
 infoMiCasa();
+
+//suscripcion
+
+function suscripcion(){
+    let mail  = document.getElementById ("inputQuisquilloso").value;
+    alert ("Gracias por suscribirte, tu mail "+mail+ " se almacenó con éxito en nuestra base de magos y brujas");
+    
+  } 
+  
+  suscripcion();
 
 //Primer entrega final--> la idea es sumar puntos a las distintas casas
 
