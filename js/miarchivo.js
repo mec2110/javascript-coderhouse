@@ -131,9 +131,8 @@ for (const datos of casasHogwarts){
 infoMiCasa();
 
 //suscripcion
-let mail = document.getElementById("inputQuisquilloso").value;
 function suscripcion(){
-    mail=[];
+ let mail  = document.getElementById ("inputQuisquilloso").value;  
 document.getElementById("inputQuisquillosoEnviar").addEventListener("click",function(){
     alert ("Gracias por suscribirte, tu mail "+mail+ " se almacenó con éxito en nuestra base de magos y brujas");
     }, false);
