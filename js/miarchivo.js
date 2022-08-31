@@ -39,10 +39,10 @@ while ( animal == ""){
     animal = prompt ("Ahora, cuentame si tuvieras qué elegir una mascota, preferís aguila, hurón, león, víbora, delfín, gato, perro o loro?");
     switch (animal) {
         case "águila":
-             alert("mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero sólo un Slytherin creería qué es más inteligente que yo por elegir lo obvio así qué...SLYTHERIN!");
+            alert("mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero sólo un Slytherin creería qué es más inteligente que yo por elegir lo obvio así qué...SLYTHERIN!");
              break;
              case "aguila":
-              alert("mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero pero águila lleva acento en la a...así que...GRYFFINDOR!");
+                alert("mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero pero águila lleva acento en la a...así que...GRYFFINDOR!");
               break;
          case "hurón":
              alert("Cuanta sinceridad "+ Nombre + "\nclaramente, Hufflepuff!");
@@ -91,14 +91,10 @@ welcome.innerHTML = "¡Te damos la bienvenida a Hogwarts "+ Nombre+"!";
 
 //tucasadeHogwarts(); 
 
-git
 
 
 //Arrays--> ingresar la casa en la que quedo seleccionado/a para conocer más sobre la misma
 
-
-
-//const casasHogwarts =[Gryffindor,Slytherin,Ravenclaw ,Hufflepuff ];
 function infoMiCasa(){
     const Gryffindor ={ caract:"Los magos y hechiceras de está casa se caracterizan por su Valor. Como se mencionó previamente, su fundador es Godric Gryffindor. El animal que los representa es el león." };
 const Slytherin ={ caract:"Los magos y hechiceras de está casa se caracterizan por su Ambición. Como se mencionó previamente, su fundador es Salazar Slytherin. El animal que los representa es la serpiente."};
@@ -135,14 +131,32 @@ for (const datos of casasHogwarts){
 infoMiCasa();
 
 //suscripcion
-
+let mail = document.getElementById("inputQuisquilloso").value;
 function suscripcion(){
-    let mail  = document.getElementById ("inputQuisquilloso").value;
+    mail=[];
+document.getElementById("inputQuisquillosoEnviar").addEventListener("click",function(){
     alert ("Gracias por suscribirte, tu mail "+mail+ " se almacenó con éxito en nuestra base de magos y brujas");
-    
+    }, false);
+   
   } 
   
   suscripcion();
+
+//contador
+
+
+function incrementClick() {
+    var counterVal = 1;
+    updateDisplay(++counterVal);
+}
+
+
+function updateDisplay(val) {
+    document.getElementById("counter-label").innerHTML = val;
+    document.getElementById("counter-label2").innerHTML = val;
+    document.getElementById("counter-label3").innerHTML = val;
+    document.getElementById("counter-label4").innerHTML = val;
+}
 
 //Primer entrega final--> la idea es sumar puntos a las distintas casas
 
