@@ -82,7 +82,7 @@ welcome.innerHTML = "¡Te damos la bienvenida a Hogwarts, "+ Nombre+"!";
    
 } 
 
-//tucasadeHogwarts(); 
+tucasadeHogwarts(); 
 
 
 
