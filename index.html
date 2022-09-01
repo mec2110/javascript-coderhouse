@@ -15,7 +15,7 @@
   <!--font awesome 5-->
   <script src="https://kit.fontawesome.com/cb49666651.js" crossorigin="anonymous"></script>
   <!--titulo-->
-  <title>Desafio 9</title>
+  <title>Segunda pre entrega</title>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
         <a href="#lechuza"><i class="fa-brands fa-earlybirds" style="font-size:20px;color:#ffffff;"></i> MANDANOS TU
           LECHUZA</a>
 
-
+        <a href="ingresar.html"> Registrate   </a>
 
 
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -49,10 +49,10 @@
     <DIV>
       <img src="img/SWKYEVQYAFFERMGFAGBCTFUZAE.jpg" style="width:100%">
       <div class="text-center h1" id="bienvenida">
-
+        <img src="img/monophy.gif">
       </div>
     </DIV>
-    <img src="img/monophy.gif">
+    
   </section>
   <section id="casas" class="container">
     <h3>CASAS</h3>
@@ -83,17 +83,41 @@
       </div>
       </br></br>
       <div>
+        ✨Ingresá tu Nombre
         <input type="text" id="inputNombre">
-        <input type="button" class="btn" value="Enviar Nombre" onclick="tucasadeHogwarts();">
+        ✨ ¿Qué casa preferís?
+        <input type="text" id="inputPreferencia" >
+        <p>
+          ✨Ahora, cuentame si tuvieras qué elegir una mascota, preferís aguila, hurón, león, víbora, delfín, gato, perro o loro?
+        </p>
+        <input type="text" id="inputAnimal">
+        <input type="button" class="btn r" value="Enviar" id="tucasadeHogwarts" >
       </div>
+    </br>
+      <p class="resultado" id="resultado">
+      </p>
+
+      <p class="resultado2" id="resultado2">
+      </p>
+
+      <p class="resultado3" id="resultado3">
+      </p>
+
+      <p class="resultado4" id="resultado4">
+      </p>
+      
       
     </div>
+    
     <div id="casa">
-
     </div>
 
-    <hr>
+    
     <br>
+    </section>
+    <!--Termino sección sombrero seleccionador-->
+    <hr>
+    <section class="container">
     <h3>HISTORIA</h3>
     <h2>¿Querés saber más sobre tu casa?</h2>
     <div>
@@ -108,16 +132,18 @@
     <div>
       <p>
         <input type="text" id="inputInfo">
-        <input type="button" class="btn" value="Quiero saber más!" onclick="infoMiCasa();">
+        <input type="button" class="btn r" value="Quiero saber más!" onclick="infoMiCasa();">
 
       </p>
     </div>
+  </br>
     <div id="contenedor">
 
     </div>
-    <hr>
+   
     <br>
   </section>
+  <hr>
   <section id="copas">
     <div class="container">
       <div class="text-center">
@@ -125,8 +151,7 @@
         </br>
         <h6>Conocé los resultados parciales de la copa anual de las casas!</h6>
         </br>
-        <p>Quién ganará? </p>
-        <p>Serán los valerosos Gryffindor o el ambisioso Slytherin? los inteligentes de Ravenclaw? o nos sorprenderá
+        <p><strong>Quién ganará?</strong> Serán los valerosos Gryffindor o el ambisioso Slytherin? los inteligentes de Ravenclaw? o nos sorprenderá
           Huplefuf?
         </p>
       </div>

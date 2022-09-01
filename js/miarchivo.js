@@ -1,84 +1,75 @@
-// Dom
-function bienvenida(){
-    let student  = prompt("¿Te consideras una persona mágica? Si/No");
-  
-    if (student == "Si") {
-        alert ("✨Te damos la bienvenida a Hogwarts, 10puntos para Gryffindor!✨");
-    }
-    
-    else if (student == "No"){
-        alert("Todos tenemos magia, descubrilá acá!");
-    }
-    
-  } 
-  
-  bienvenida(); 
-  
 
-
-let Nombres = document.getElementById ("seleccion")
-Nombres.innerHTML = "✨Soy el sombrero seleccionador, decime tu nombre...✨";
 
 //Simulador para saber de que casa de hogwarts sos*
 
 function tucasadeHogwarts(){
+    document.getElementById("tucasadeHogwarts").addEventListener("click",function(){
 let Nombre = document.getElementById ("inputNombre").value;
-// while (Nombre === "") {
-// alert ("Por favor, ingresa tu nombre o te envío a Azkaban!");
-// Nombre = document.getElementById ("inputNombre").value;
-// }
 
-let casa= prompt("Qué casa prefieres?");
+
+let casa= document.getElementById ("inputPreferencia").value;
 while(casa === "") {
     alert ("si no ingresas una casa, podés volver a la tuya...");
-    casa= prompt("Qué casa prefieres?");
+    casa= document.getElementById ("inputPreferencia").value;
   }
 
   let animal= "";
 while ( animal == ""){
-    animal = prompt ("Ahora, cuentame si tuvieras qué elegir una mascota, preferís aguila, hurón, león, víbora, delfín, gato, perro o loro?");
+    animal = document.getElementById ("inputAnimal").value;
     switch (animal) {
         case "águila":
-            alert("mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero sólo un Slytherin creería qué es más inteligente que yo por elegir lo obvio así qué...SLYTHERIN!");
+            aguila= document.getElementById ("resultado");
+            aguila.innerHTML ="mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero sólo un Slytherin creería qué es más inteligente que yo por elegir lo obvio así qué...SLYTHERIN!";
              break;
              case "aguila":
-                alert("mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero pero águila lleva acento en la a...así que...GRYFFINDOR!");
+                aguila= document.getElementById ("resultado2");
+            aguila.innerHTML ="mmmm interesante elección "+ Nombre + "\nLa respuesta rápida sería Ravenclaw, pero pero águila lleva acento en la a...así que...GRYFFINDOR!";
               break;
          case "hurón":
-             alert("Cuanta sinceridad "+ Nombre + "\nclaramente, Hufflepuff!");
+            huron= document.getElementById ("resultado4");
+        huron.innerHTML ="Cuanta sinceridad "+ Nombre + "\nclaramente, Hufflepuff!"
              break;
-         case "huron":
-              alert("Te falto el acento joven "+ Nombre + "\nigualmente, Hufflepuff!");
+         case "huron":huron= document.getElementById ("resultado4");
+         huron.innerHTML ="Te falto el acento joven "+ Nombre + "\nigualmente, Hufflepuff!";
               break;
         case "león":
-            alert("No siempre lo obvio es tan obvio "+ Nombre + "\nSLYTHERIN!");
+            leon= document.getElementById ("resultado");
+        leon.innerHTML ="No siempre lo obvio es tan obvio "+ Nombre + "\nSLYTHERIN!";
             break;//
         case "leon":
-            alert("es León, no leon "+ Nombre + "\n Hufflepuff!");
+            leon= document.getElementById ("resultado4");
+            leon.innerHTML ="es León, no leon "+ Nombre + "\n Hufflepuff!";
             break;
         case "víbora":
-            alert("Hay que ser valiente para tener un animal venenoso de mascota joven "+ NombreIngresado + "\npero hay que prestar mucha atención para escribirlo con acento, RAVENCLAW");
+            vibora= document.getElementById ("resultado3");
+        vibora.innerHTML ="Hay que ser valiente para tener un animal venenoso de mascota joven "+ NombreIngresado + "\npero hay que prestar mucha atención para escribirlo con acento, RAVENCLAW";
             break;
         case "vibora":
-              alert("Se requiere valor para tener una víbora de mascota, pero brutalidad para olvidarse un acento, "+ Nombre + "\neres...SLYTHERIN!");
+            vibora= document.getElementById ("resultado");
+            vibora.innerHTML ="Se requiere valor para tener una víbora de mascota, pero brutalidad para olvidarse un acento, "+ Nombre + "\neres...SLYTHERIN!";
               break;
         case "delfín":
-            alert("Es un animal amistoso, ¿sabía joven "+ Nombre + "?" + "\npero también inteligente, RAVENCLAW!");
+            delfin= document.getElementById ("resultado3");
+        delfin.innerHTML ="Es un animal amistoso, ¿sabía joven "+ Nombre + "?" + "\npero también inteligente, RAVENCLAW!";
             break;
         case "delfin":
-              alert("Es un animal amistoso, y supongo que usted también joven "+ Nombre + "\nEres Hufflepuff!");
+            delfin= document.getElementById ("resultado4");
+            delfin.innerHTML ="Es un animal amistoso, y supongo que usted también joven "+ Nombre + "\nEres Hufflepuff!";
               break;
         case "gato":
             alert("Astuto, ambicioso, independiente...una buena elección "+ Nombre + "\nSLYTHERIN!");
                 break;
         case "perro":
-            alert("Leal, muy leal...espero que usted también lo sea joven "+ Nombre + "\ny valiente! GRYFFINDOR!");
+            gato= document.getElementById ("resultado2");
+        gato.innerHTML ="Leal, muy leal...espero que usted también lo sea joven "+ Nombre + "\ny valiente! GRYFFINDOR!";
             break;
         case "loro":
-            alert("Charlatán, lunatico y aventurero...podrías ser de cualquier casa "+ Nombre + " pero serás de " + casa);
+            loro= document.getElementById ("resultado2");
+        loro.innerHTML ="Charlatán, lunatico y aventurero...podrías ser de cualquier casa "+ Nombre + " pero serás de " + casa;
             break;
         default:
-          alert("Esa no es una de las opciones dadas " + Nombre + "\nEres re Slytherin!");
+            defaul= document.getElementById ("resultado");
+          defaul.innerHTML="Esa no es una de las opciones dadas " + Nombre + "\nEres re Slytherin!";
         
     } 
     
@@ -86,7 +77,9 @@ while ( animal == ""){
   }
   
 let welcome = document.getElementById ("bienvenida")
-welcome.innerHTML = "¡Te damos la bienvenida a Hogwarts "+ Nombre+"!";
+welcome.innerHTML = "¡Te damos la bienvenida a Hogwarts, "+ Nombre+"!";
+} , false);
+   
 } 
 
 //tucasadeHogwarts(); 
@@ -131,15 +124,17 @@ for (const datos of casasHogwarts){
 infoMiCasa();
 
 //suscripcion
-function suscripcion(){
- let mail  = document.getElementById ("inputQuisquilloso").value;  
-document.getElementById("inputQuisquillosoEnviar").addEventListener("click",function(){
-    alert ("Gracias por suscribirte, tu mail "+mail+ " se almacenó con éxito en nuestra base de magos y brujas");
+function suscripcion(){	
+	document.getElementById("inputQuisquillosoEnviar").addEventListener("click",function(){
+		const mail  = document.getElementById ("inputQuisquilloso").value;
+		console.log("MAIL: " + mail)
+		alert ("Gracias por suscribirte, tu mail "+mail+ " se almacenó con éxito en nuestra base de magos y brujas");
     }, false);
    
   } 
   
   suscripcion();
+  
 
 //contador
 
@@ -148,33 +143,25 @@ function incrementClick() {
     var counterVal = 1;
     updateDisplay(++counterVal);
 }
-
-
 function updateDisplay(val) {
-    document.getElementById("counter-label").innerHTML = val;
-    document.getElementById("counter-label2").innerHTML = val;
-    document.getElementById("counter-label3").innerHTML = val;
-    document.getElementById("counter-label4").innerHTML = val;
+    document.getElementById ("counter-label").innerHTML = val;
+    
 }
 
-//Primer entrega final--> la idea es sumar puntos a las distintas casas
+//Login con LocalStorage
 
-// const copaCasas = [
-//     {nombre: Gryffindor, puntos: 0},
-// { nombre: Slytherin, puntos: 0},
-// { nombre: Ravenclaw, puntos: 0},
-// { nombre:Hufflepuff, puntos: 0},
-
-// ]
-
-// const puntos = copaCasas.map((el)=> 
-// {console.log(el.nombre);
-//     return{
-//         nombre: el.nombre,
-//         puntos: el.puntos + 10,
+const submitHandler = e =>{
+        e.preventDefault();
         
-// }
-
-// })
-// alert (puntos[0].nombre);
-
+        const nombre = e.target.nombre.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+    
+        if((nombre === "XXXX") &&(email === "XXXX") && (password === "XXXXX")){
+            alert("Iniciaste sesión con éxito")
+        }
+    
+        localStorage.setItem('nombre', nombre)
+        localStorage.setItem('email', email)
+        localStorage.setItem('password', password)
+    }

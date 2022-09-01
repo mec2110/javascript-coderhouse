@@ -1,0 +1,50 @@
+.container {
+    padding: 50px;
+  }
+
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+
+  /*inputs*/
+  input[type=text], input[type=password],  input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(62, 5, 61);
+    box-sizing: border-box;
+  }
+
+  /*Btn*/
+
+  .btn-login{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+  }
+  
+/*P no tengo usuario*/
+.psmall{
+    font-size: 16px;
+    color: rgb(46, 9, 80)!important;
+    font-style: italic;
+}
+
+.pmedium{
+    font-size: 25px;
+    color: rgb(46, 9, 80)!important;
+}
+
+/*Alineaciones*/
+
+.left{
+    text-align: left !important;
+}
+
+.right{
+    text-align: right;
+}

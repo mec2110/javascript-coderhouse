@@ -4,7 +4,7 @@
 }
 
 body{
-    text-align: center;
+    text-align: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
 }
 
@@ -74,18 +74,18 @@ footer {
 
 
 h1{
-    font-size: 50px;
+    font-size: 80px;
     color: rgb(42, 6, 77);
 }
 
 h2{
     font-size: 30px;
-    color: rgb(159, 157, 161);
+    color: rgb(61, 44, 79);
 }
 
 h3{
-    font-size: 20px;
-    color: #000;
+    font-size: 40px;
+    color: rgb(50, 3, 56);
     /*font-family:"WizardWorld";*/
 }
 /*Nav*/
@@ -221,4 +221,56 @@ border-bottom: 1px solid #ffffff  }
     color: #ffffff;
      text-decoration: none;
     
+}
+
+/*inputs*/
+
+/*inputs*/
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(62, 5, 61);
+  box-sizing: border-box;
+  color: #cccccc;
+}
+
+.r{
+  float: right;
+  
+}
+
+.resultado{
+  font-size: 30px;
+  background-color: rgb(154, 233, 199);
+  color: #042c06;
+  padding: 20px;
+  border-radius: 2px;
+  margin:20px;
+}
+.resultado2{
+  font-size: 30px;
+  background-color: rgb(233, 178, 154);
+  color: #2e0404;
+  padding: 20px;
+  border-radius: 2px;
+  margin:20px;
+}
+.resultado3{
+  font-size: 30px;
+  background-color: rgb(154, 196, 233);
+  color: #0d0230;
+  padding: 20px;
+  border-radius: 2px;
+  margin:20px;
+}
+
+.resultado4{
+  font-size: 30px;
+  background-color: rgb(234, 229, 170);
+  color: #b37407;
+  padding: 20px;
+  border-radius: 2px;
+  margin:20px;
 }
