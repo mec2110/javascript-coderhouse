@@ -143,27 +143,39 @@ function suscripcion(){
 
 var a = 10;
 function incrementClick() {
+    document.getElementById("incrementClick").addEventListener("click",function(){
     a = a * 5;
     document.getElementById ("counter-label").innerHTML = a;
-};
+}, false);
+   
+} incrementClick();
 
 var b = 5;
 function incrementClick2() {
+    document.getElementById("incrementClick2").addEventListener("click",function(){
     b = b * 5;
     document.getElementById ("counter-label2").innerHTML = b;
-}
+}, false);
+   
+} incrementClick2();
 
 var c = 2;
 function incrementClick3() {
+    document.getElementById("incrementClick3").addEventListener("click",function(){
     c = c * 5;
     document.getElementById ("counter-label3").innerHTML = c;
-}
+}, false);
+   
+} incrementClick3();
 
 var d = 1;
 function incrementClick4() {
+    document.getElementById("incrementClick4").addEventListener("click",function(){
     d = d * 5;
     document.getElementById ("counter-label4").innerHTML = d;
-}
+}, false);
+   
+} incrementClick4();
 
 //Login con LocalStorage
 
