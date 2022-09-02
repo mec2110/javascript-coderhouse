@@ -57,7 +57,8 @@ while ( animal == ""){
             delfin.innerHTML ="Es un animal amistoso, y supongo que usted también joven "+ Nombre + "\nEres Hufflepuff!";
               break;
         case "gato":
-            alert("Astuto, ambicioso, independiente...una buena elección "+ Nombre + "\nSLYTHERIN!");
+            gato= document.getElementById ("resultado");
+            gato.innerHTML ="Astuto, ambicioso, independiente...una buena elección "+ Nombre + "\nSLYTHERIN!";
                 break;
         case "perro":
             gato= document.getElementById ("resultado2");

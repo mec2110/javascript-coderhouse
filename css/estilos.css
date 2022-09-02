@@ -49,7 +49,8 @@ footer {
 .column-pts{
     padding: 10px;
     margin-top:20px ;
-    font-size: 1rem;
+    font-size: 2rem;
+    text-align: center;
     
 }
 
@@ -243,34 +244,31 @@ input[type=text] {
 
 .resultado{
   font-size: 30px;
-  background-color: rgb(154, 233, 199);
+  /*background-color: rgb(154, 233, 199);*/
   color: #042c06;
-  padding: 20px;
-  border-radius: 2px;
-  margin:20px;
 }
 .resultado2{
   font-size: 30px;
-  background-color: rgb(233, 178, 154);
   color: #2e0404;
+
+  /*background-color: rgb(233, 178, 154);*/
+ 
+}
+.destacadas{
   padding: 20px;
   border-radius: 2px;
   margin:20px;
 }
 .resultado3{
   font-size: 30px;
-  background-color: rgb(154, 196, 233);
+  /*background-color: rgb(154, 196, 233);*/
   color: #0d0230;
-  padding: 20px;
-  border-radius: 2px;
-  margin:20px;
+ 
 }
 
 .resultado4{
   font-size: 30px;
-  background-color: rgb(234, 229, 170);
+  /*background-color: rgb(234, 229, 170);*/
   color: #b37407;
-  padding: 20px;
-  border-radius: 2px;
-  margin:20px;
+ 
 }
