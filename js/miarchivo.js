@@ -89,6 +89,7 @@ tucasadeHogwarts();
 //Arrays--> ingresar la casa en la que quedo seleccionado/a para conocer más sobre la misma
 
 function infoMiCasa(){
+    document.getElementById("infoCasa").addEventListener("click",function(){
     const Gryffindor ={ caract:"Los magos y hechiceras de está casa se caracterizan por su Valor. Como se mencionó previamente, su fundador es Godric Gryffindor. El animal que los representa es el león." };
 const Slytherin ={ caract:"Los magos y hechiceras de está casa se caracterizan por su Ambición. Como se mencionó previamente, su fundador es Salazar Slytherin. El animal que los representa es la serpiente."};
 const Ravenclaw ={ caract:"Los magos y hechiceras de está casa se caracterizan por su Inteligencia. Como se mencionó previamente, su fundadora es Rowena Ravenclaw. El animal que los representa es el aguila."};
@@ -120,14 +121,16 @@ for (const datos of casasHogwarts){
     
 
 };
-}
+}, false);
+   
+} 
 infoMiCasa();
 
 //suscripcion
 function suscripcion(){	
 	document.getElementById("inputQuisquillosoEnviar").addEventListener("click",function(){
 		const mail  = document.getElementById ("inputQuisquilloso").value;
-		console.log("MAIL: " + mail)
+        localStorage.setItem('email', mail);
 		alert ("Gracias por suscribirte, tu mail "+mail+ " se almacenó con éxito en nuestra base de magos y brujas");
     }, false);
    
