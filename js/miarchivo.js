@@ -139,16 +139,30 @@ function suscripcion(){
   suscripcion();
   
 
-//contador
+//contadores de puntos
 
-
+var a = 10;
 function incrementClick() {
-    var counterVal = 1;
-    updateDisplay(++counterVal);
+    a = a * 5;
+    document.getElementById ("counter-label").innerHTML = a;
+};
+
+var b = 5;
+function incrementClick2() {
+    b = b * 5;
+    document.getElementById ("counter-label2").innerHTML = b;
 }
-function updateDisplay(val) {
-    document.getElementById ("counter-label").innerHTML = val;
-    
+
+var c = 2;
+function incrementClick3() {
+    c = c * 5;
+    document.getElementById ("counter-label3").innerHTML = c;
+}
+
+var d = 1;
+function incrementClick4() {
+    d = d * 5;
+    document.getElementById ("counter-label4").innerHTML = d;
 }
 
 //Login con LocalStorage
