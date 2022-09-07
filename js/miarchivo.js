@@ -136,7 +136,7 @@ infoMiCasa();
 function suscripcion(){	
 	document.getElementById("inputQuisquillosoEnviar").addEventListener("click",function(){
 		const mail  = document.getElementById ("inputQuisquilloso").value;
-        localStorage.setItem('email', mail);
+        localStorage.setItem('mail', mail);
         localStorage.getItem('mail');
 		//alert ("Gracias por suscribirte, tu mail "+mail+ " se almacenó con éxito en nuestra base de magos y brujas");
         // if (mail == ""){
