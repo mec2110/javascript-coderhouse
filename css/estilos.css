@@ -272,3 +272,8 @@ input[type=text] {
   color: #b37407;
  
 }
+
+.alerta{
+  color: rgb(243, 213, 212) !important;
+  font-size: 12px!important;
+}

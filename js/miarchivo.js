@@ -10,8 +10,10 @@ let Nombre = document.getElementById ("inputNombre").value;
 
 let casa= document.getElementById ("inputPreferencia").value;
 while(casa === "") {
-    alert ("si no ingresas una casa, podés volver a la tuya...");
+    document.write("Es necesario que ingreses todos los datos solicitados, refrescá el sitio y volvé a completar el test.");
     casa= document.getElementById ("inputPreferencia").value;
+    // alertaCasa=document.getElementById ("faltanDatos");
+   // alertaCasa.innerHTML=("Si no ingresas una casa, podés volver a la tuya...");
   }
 
   let animal= "";
@@ -118,6 +120,8 @@ for (const datos of casasHogwarts){
     if (datos.name.toUpperCase() == infoCasas.toUpperCase()) {
         let contenedor = document.getElementById("contenedor");
         contenedor.innerHTML = datos.caract;
+    } else {
+        document.getElementById("error").innerHTML="Tenés que ingresar un nombre de casa valido";
     }
 
     

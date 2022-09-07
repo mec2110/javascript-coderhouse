@@ -18,7 +18,7 @@ formulario.addEventListener("submit",(e) => {
     if (userLogin && mailLogin && passwordLogin) {
         let nuevoUsuario = new Usuario (userLogin, mailLogin , passwordLogin);
         usuarios.push(nuevoUsuario)
-        alert("Iniciaste sesión con éxito",nuevoUsuario.user);
+        ("Iniciaste sesión con éxito",nuevoUsuario.user).innerHTML;
         console.log(usuarios);
         localStorage.setItem('userName', userLogin);
         localStorage.getItem('userName');
@@ -26,5 +26,5 @@ formulario.addEventListener("submit",(e) => {
         localStorage.getItem('userMail');
         localStorage.setItem('userPass', passwordLogin);
         localStorage.getItem('userPass');
-    }else{alert("Tenés que ingresar todos los datos solicitados");}
+    }else{document.getElementById("error").innerHTML="Tenés que ingresar todos los datos solicitados";}
     }) 
