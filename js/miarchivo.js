@@ -3,7 +3,8 @@
 //Simulador para saber de que casa de hogwarts sos*
 
 function tucasadeHogwarts(){
-    document.getElementById("tucasadeHogwarts").addEventListener("click",function(){
+    var tucasadeHogwarts=document.getElementById("tucasadeHogwarts")
+    tucasadeHogwarts.addEventListener("click",function(){
 let Nombre = document.getElementById ("inputNombre").value;
 
 
@@ -133,6 +134,9 @@ function suscripcion(){
 		const mail  = document.getElementById ("inputQuisquilloso").value;
         localStorage.setItem('email', mail);
 		alert ("Gracias por suscribirte, tu mail "+mail+ " se almacenó con éxito en nuestra base de magos y brujas");
+        if (mail == ""){
+            alert("Por favor, ingresá un mail para suscribirte");
+        }
     }, false);
    
   } 
@@ -179,19 +183,48 @@ function incrementClick4() {
 } incrementClick4();
 
 //Login con LocalStorage
-
-const submitHandler = e =>{
-        e.preventDefault();
-        
-        const nombre = e.target.nombre.value;
-        const email = e.target.email.value;
-        const password = e.target.password.value;
-    
-        if((nombre === "XXXX") &&(email === "XXXX") && (password === "XXXXX")){
-            alert("Iniciaste sesión con éxito")
-        }
-    
-        localStorage.setItem('nombre', nombre)
-        localStorage.setItem('email', email)
-        localStorage.setItem('password', password)
+let formulario = document.getElementById("formularios");
+class User {
+    constructor(user,mail, password){
+        this.user = user;
+        this.mail = mail;
+        this.password = password;
     }
+}
+
+let usuarios= [];
+formulario.addEventListener("submit",(e) => {
+    e.preventDefault();
+    let userLogin = document.getElementById("userName").value;
+    let mailLogin = document.getElementById("userMail").value;
+    let passwordLogin = document.getElementById("userPass").value;
+
+    if (userLogin && mailLogin && passwordLogin) {
+        let nuevoUsuario = new Usuario (userLogin, mailLogin , passwordLogin);
+        usuarios.push(nuevoUsuario)
+        alert("Iniciaste sesión con éxito",nuevoUsuario.user);
+        console.log(usuarios);
+        localStorage.setItem('userName', userLogin);
+        localStorage.getItem('userName');
+        localStorage.setItem('userMail', mailLogin);
+        localStorage.getItem('userMail');
+        localStorage.setItem('userPass', passwordLogin);
+        localStorage.getItem('userPass');
+    }else{alert("Tenés que ingresar todos los datos solicitados");}
+    }) 
+
+
+
+    //Nav toggle
+    
+    function myFunction() {
+        document.getElementById("myFunction").addEventListener("click",function(){
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }, false);
+    }
+     myFunction();
