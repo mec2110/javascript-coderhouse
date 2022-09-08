@@ -10,7 +10,15 @@ let Nombre = document.getElementById ("inputNombre").value;
 
 let casa= document.getElementById ("inputPreferencia").value;
 while(casa === "") {
-    document.write("Es necesario que ingreses todos los datos solicitados, refrescá el sitio y volvé a completar el test.");
+    Toastify({
+        text:"Es necesario que ingreses todos los datos solicitados, refrescá el sitio y volvé a completar el test.",
+        duration:3000,
+        gravity:"top",
+        position:"left",
+        stopOnFocus: true,
+        style:{background: "linear-gradient(to right, #ccccc, #0000000"}
+    }).showToast();
+    //document.write("Es necesario que ingreses todos los datos solicitados, refrescá el sitio y volvé a completar el test.");
     casa= document.getElementById ("inputPreferencia").value;
     // alertaCasa=document.getElementById ("faltanDatos");
    // alertaCasa.innerHTML=("Si no ingresas una casa, podés volver a la tuya...");
@@ -142,6 +150,7 @@ function suscripcion(){
         // if (mail == ""){
         //     alert("Por favor, ingresá un mail para suscribirte");
         // }
+       
         alerta= document.getElementById ("mensajeSuscripcion");
         mail != ""? alerta.innerHTML ="Gracias por suscribirte, tu mail "+mail+ " se almacenó con éxito en nuestra base de magos y brujas":alerta.innerHTML ="Por favor, ingresá un mail para suscribirte"
     }, false);

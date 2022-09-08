@@ -29,5 +29,7 @@ formulario.addEventListener("submit",(e) => {
         localStorage.getItem('userMail');
         localStorage.setItem('userPass', passwordLogin);
         localStorage.getItem('userPass');
-    }  else if ((userLogin =="")&&(mailLogin=="")&&(passwordLogin==""))  { resultado.innerHTML="Tenés que ingresar todos los datos solicitados";}
-    }) 
+    }  else   { swal("Tenés que ingresar todos los datos solicitados",{icon:"error",button:"Aceptar",});}
+    }) ;
+
+swal ()
