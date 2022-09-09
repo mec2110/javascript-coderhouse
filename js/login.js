@@ -1,5 +1,5 @@
 //Login con LocalStorage
-let formulario = document.getElementById("formularios");
+let formulario = document.getElementById("formulario");
 let resultado =  document.getElementById("error");
 let resultado2 =  document.getElementById("exito");
 
@@ -21,7 +21,6 @@ formulario.addEventListener("submit",(e) => {
     if (userLogin && mailLogin && passwordLogin) {
         let nuevoUsuario = new User (userLogin, mailLogin , passwordLogin);
         usuarios.push(nuevoUsuario);
-        resultado2.innerHTML="Iniciaste sesión con éxito,ingresá acá";
     
         localStorage.setItem('userName', userLogin);
         localStorage.getItem('userName');
@@ -29,7 +28,8 @@ formulario.addEventListener("submit",(e) => {
         localStorage.getItem('userMail');
         localStorage.setItem('userPass', passwordLogin);
         localStorage.getItem('userPass');
+        swal("Tu solicitud a Hogwarts ha sido aceptada!",{icon:"success",button:"Aceptar",}).then(function(){
+            window.location = "index.html";
+        });
     }  else   { swal("Tenés que ingresar todos los datos solicitados",{icon:"error",button:"Aceptar",});}
     }) ;
-
-swal ()

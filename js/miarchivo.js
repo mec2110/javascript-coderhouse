@@ -6,26 +6,9 @@ function tucasadeHogwarts(){
     var tucasadeHogwarts=document.getElementById("tucasadeHogwarts")
     tucasadeHogwarts.addEventListener("click",function(){
 let Nombre = document.getElementById ("inputNombre").value;
-
-
 let casa= document.getElementById ("inputPreferencia").value;
-while(casa === "") {
-    Toastify({
-        text:"Es necesario que ingreses todos los datos solicitados, refrescá el sitio y volvé a completar el test.",
-        duration:3000,
-        gravity:"top",
-        position:"left",
-        stopOnFocus: true,
-        style:{background: "linear-gradient(to right, #ccccc, #0000000"}
-    }).showToast();
-    //document.write("Es necesario que ingreses todos los datos solicitados, refrescá el sitio y volvé a completar el test.");
-    casa= document.getElementById ("inputPreferencia").value;
-    // alertaCasa=document.getElementById ("faltanDatos");
-   // alertaCasa.innerHTML=("Si no ingresas una casa, podés volver a la tuya...");
-  }
-
-  let animal= "";
-while ( animal == ""){
+let animal= "";
+if ( animal == ""){
     animal = document.getElementById ("inputAnimal").value;
     switch (animal) {
         case "águila":
@@ -83,10 +66,14 @@ while ( animal == ""){
             defaul= document.getElementById ("resultado");
           defaul.innerHTML="Esa no es una de las opciones dadas " + Nombre + "\nEres re Slytherin!";
         
-    } 
+    } ;
     
 
-  }
+  } if (casa === "") {
+    alertaCasa=document.getElementById ("faltanDatos");
+    alertaCasa.innerHTML=("Tenés que ingresar todos los datos solicitados...");
+   
+  };//revisar para que cuando salga estè mensaje no salga la casa
   
 let welcome = document.getElementById ("bienvenida")
 welcome.innerHTML = "¡Te damos la bienvenida a Hogwarts, "+ Nombre+"!";
