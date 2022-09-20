@@ -1,7 +1,7 @@
 //Fetch API HP
 
 
-const hechizos = documente.getElementbyId("hechizoElegido")
+const hechizos = document.getElementbyId("hechizoElegido")
 
 fetch("https://hp-api.herokuapp.com/api/spells")
      .then((spell)=>spell.json())
