@@ -282,3 +282,16 @@ input[type=text] {
   color: rgb(255, 8, 0) !important;
   font-size: 16px!important;
 }
+
+/*otros*/
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
