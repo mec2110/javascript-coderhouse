@@ -111,16 +111,23 @@ casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracteriz
 casasHogwarts.push (new Casa("Los magos y hechiceras de está casa se caracterizan por su Honestidad. Como se mencionó previamente, su fundadora es Helga Hufflepuff. El animal que los representa es el huron.", "Hufflepuff", "hufflepuff"));
 
 
-for (const datos of casasHogwarts){
-    if (datos.name.toUpperCase() == infoCasas.toUpperCase()) {
-        let contenedor = document.getElementById("contenedor");
-        contenedor.innerHTML = datos.caract;
-    } else {
-        document.getElementById("error").innerHTML="Tenés que ingresar un nombre de casa valido";
-    }
+/*
+Obtenemos el mensaje correspondiente a la casa ingresada
+*/
+let casah
+casah = casasHogwarts.find((casa)=>{
+    return casa.name.toUpperCase() === infoCasas.toUpperCase()
+});
 
+if (casah) {
+    document.getElementById("error").innerHTML=''
+    let contenedor = document.getElementById("contenedor");
+    contenedor.innerHTML = casah.caract;
     
-
+} else {
+    contenedor.innerHTML = ''
+    document.getElementById("error").innerHTML="Tenés que ingresar un nombre de casa valido";
+    
 };
 }, false);
    
