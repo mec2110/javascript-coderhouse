@@ -25,6 +25,23 @@ $fragment = personajes.createDocumentFragment();
 
 personajes.addEventListener("keypress",async e => {
 if(e.target.matches("#search")){
-    console.log(e.key);
+    if(e.key === "Enter"){
+        try{
+$characters.innerHTML =`<img class="loader" src="../img/loader.gif" alt="Cargando..."/>`;
+
+let query = e.target.value.toLowerCase();
+api="https://hp-api.herokuapp.com/api/characters=${query}";
+res = await fetch(api);
+json = await res.json();
+
+//arranco con los condicionales
+
+if (!res.ok)throw {status: res.status, statusText:res.statusTex}
+        }catch (err){
+console.log(err);
+let message = err.statusText|| "Asì como es Le vi O sa, no leviosaaa...el nombre que ingresaste es incorrecto!";
+$characters.innerHTML = `<p>Error ${err.status}:${message}</p>`;
+        }
+    }
 }
 });
