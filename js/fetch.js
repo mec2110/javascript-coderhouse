@@ -18,9 +18,9 @@
 //      }))
 
 
-const personajes=document,
-$characters =personajes.getElementById("characters"),
-$template=personajes.getElementById("character-template").content,
+const personajes = document,
+$characters = personajes.getElementById("characters"),
+$template = personajes.getElementById("character-template").content,
 $fragment = personajes.createDocumentFragment();
 
 personajes.addEventListener("keypress",async e => {
@@ -43,6 +43,7 @@ if(json.length === 0){
     json.forEach(el => {
 $template.querySelector("h3").textContent = el.name;
 $template.querySelector("div").textContent = el.dateOfBirth;
+$template.querySelector("div").textContent = el.patronus;
 $template.querySelector("div").textContent = el.house;
 $template.querySelector("img").src = el.image;
 
