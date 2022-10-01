@@ -293,3 +293,15 @@ form.example button {
   border: none;
   cursor: pointer;
 }
+
+/*fetch*/
+.grid-fluid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px, 1fr));
+  text-align: left;
+}
+
+.loader{
+  display:block;
+  margin:auto;
+}
