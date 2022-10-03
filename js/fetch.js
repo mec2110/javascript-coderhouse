@@ -34,10 +34,8 @@ api=`https://hp-api.herokuapp.com/api/characters?q=${query}`,
 res = await fetch(api),
 json = await res.json();
 
-//Manipulacion del error
-
 if (!res.ok)throw {status: res.status, statusText:res.statusTex};
-if(json.length === 0){
+if(json.length == 0){
     $characters.innerHTML = `<h2>No existen brujas y magos que se llamen: <mark>${query} </mark></h2>`;
 }else{
     json.forEach(el => {

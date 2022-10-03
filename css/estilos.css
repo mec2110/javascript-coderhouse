@@ -196,7 +196,9 @@ border-bottom: 1px solid #ffffff  }
   /*Botones a e inputs*/
   input{
     border:0;
-    border-bottom: solid 2px #000;
+    border-bottom: solid 2px rgb(33, 2, 74);
+    color:#999999;
+    padding: 10px;
   }
 
   input:focus{
