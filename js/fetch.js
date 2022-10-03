@@ -24,7 +24,7 @@ $template = personajes.getElementById("character-template").content,
 $fragment = personajes.createDocumentFragment();
 
 personajes.addEventListener("keypress",async e => {
-if(e.target.matches("#search")){
+if(e.target.matches("#inputCharacter")){
     if(e.key === "Enter"){
         try{
 $characters.innerHTML =`<img class="loader" src="../img/loader.gif" alt="Cargando..."/>`;
@@ -41,16 +41,16 @@ if(json.length === 0){
     $characters.innerHTML = `<h2>No existen brujas y magos que se llamen: <mark>${query} </mark></h2>`;
 }else{
     json.forEach(el => {
+        if(el.name.toLowerCase() == query){
 $template.querySelector("h3").textContent = el.name;
 $template.querySelector("div").textContent = el.dateOfBirth;
 $template.querySelector("div").textContent = el.patronus;
 $template.querySelector("div").textContent = el.house;
 $template.querySelector("img").src = el.image;
 
-
-
 let $clone = personajes.importNode ($template, true);
 $fragment.appendChild($clone);
+}
     });
 $characters.innerHTML ="";
     $characters.appendChild($fragment);
