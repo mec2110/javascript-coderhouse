@@ -63,8 +63,9 @@ if ( animal == ""){
         loro.innerHTML ="Charlatán, lunatico y aventurero...podrías ser de cualquier casa "+ Nombre + " pero serás de " + casa;
             break;
         default:
-            defaul= document.getElementById ("resultado");
+          defaul= document.getElementById ("resultado");
           defaul.innerHTML="Esa no es una de las opciones dadas " + Nombre + "\nEres re Slytherin!";
+          break;
         
     } ;
     
