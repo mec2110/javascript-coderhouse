@@ -73,8 +73,9 @@ if ( animal == ""){
   } if (casa === "") {
     alertaCasa=document.getElementById ("faltanDatos");
     alertaCasa.innerHTML=("Tenés que ingresar todos los datos solicitados...");
+    defaul.innerHTML="";
    
-  };//revisar para que cuando salga estè mensaje no salga la casa
+  };
   
 let welcome = document.getElementById ("bienvenida")
 welcome.innerHTML = "¡Te damos la bienvenida a Hogwarts, "+ Nombre+"!";
