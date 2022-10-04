@@ -18,11 +18,12 @@ res = await fetch(api),
 json = await res.json();
 
 if (!res.ok)throw {status: res.status, statusText:res.statusTex};
-if(json.length===0){
+if(json.length === 0){
     $characters.innerHTML = `<h2>No existen brujas y magos con ese nombre</h2>`;
 }else{
     json.forEach(el => {
         if(el.name.toLowerCase() == query){
+            $flag_searched = true ;
 $template.querySelector("h3").textContent = el.name;
 $template.querySelector("div").textContent = el.house;
 $template.querySelector("img").src = el.image;
@@ -33,10 +34,14 @@ $fragment.appendChild($clone);
     });
 $characters.innerHTML ="";
     $characters.appendChild($fragment);
+    if (!$flag_searched){
+        let message = err.statusText|| " Asi como es Le vi O sa, no leviosaaa...el nombre que ingresaste es incorrecto!";
+        $characters.innerHTML = `<p>Error ${err.status}:${message}</p>`; 
+    }
 }
         }catch (err){
 let message = err.statusText|| "Asi como es Le vi O sa, no leviosaaa...el nombre que ingresaste es incorrecto!";
-$characters.innerHTML = `<p>Error ${err.status}:${message}</p>`;
+$characters.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
         }
     }
 }
